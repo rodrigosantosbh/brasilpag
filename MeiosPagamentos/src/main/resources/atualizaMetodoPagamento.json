@@ -1,0 +1,125 @@
+{
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "cobrancas",
+    "idExterno",
+    "parcelas"
+  ],
+  "properties": {
+    "cobrancas": {
+      "type": "array",
+      "title": "The cobrancas schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+              "cartaoCredito",
+              "meioPagamento",
+              "valor"
+            ],
+            "properties": {
+              "cartaoCredito": {
+                "type": "object",
+                "title": "The cartaoCredito schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "required": [
+                  "quantidadeParcelas",
+                  "tipoTransacao",
+                  "token"
+                ],
+                "properties": {
+                  "quantidadeParcelas": {
+                    "type": "integer",
+                    "title": "The quantidadeParcelas schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0
+                  },
+                  "tipoTransacao": {
+                    "type": "string",
+                    "title": "The tipoTransacao schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                  },
+                  "token": {
+                    "type": "string",
+                    "title": "The token schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": ""
+                  }
+                },
+                "additionalProperties": true
+              },
+              "meioPagamento": {
+                "type": "string",
+                "title": "The meioPagamento schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": ""
+              },
+              "valor": {
+                "type": "integer",
+                "title": "The valor schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    },
+    "idExterno": {
+      "type": "string",
+      "title": "The idExterno schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "parcelas": {
+      "type": "array",
+      "title": "The parcelas schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "required": [
+              "parcela",
+              "valor"
+            ],
+            "properties": {
+              "parcela": {
+                "type": "integer",
+                "title": "The parcela schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0
+              },
+              "valor": {
+                "type": "number",
+                "title": "The valor schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0.0
+              }
+            },
+            "additionalProperties": true
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

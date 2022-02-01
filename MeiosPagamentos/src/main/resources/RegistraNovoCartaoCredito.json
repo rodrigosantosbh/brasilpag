@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "cliente",
+    "nomeCartao",
+    "numero",
+    "preferencial",
+    "vencimento"
+  ],
+  "properties": {
+    "cliente": {
+      "type": "object",
+      "title": "The cliente schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "required": [
+        "documento",
+        "id",
+        "primeiroNome",
+        "ultimoNome"
+      ],
+      "properties": {
+        "documento": {
+          "type": "object",
+          "title": "The documento schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "required": [
+            "numero",
+            "tipo"
+          ],
+          "properties": {
+            "numero": {
+              "type": "string",
+              "title": "The numero schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": ""
+            },
+            "tipo": {
+              "type": "string",
+              "title": "The tipo schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": ""
+            }
+          },
+          "additionalProperties": true
+        },
+        "id": {
+          "type": "string",
+          "title": "The id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "primeiroNome": {
+          "type": "string",
+          "title": "The primeiroNome schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "ultimoNome": {
+          "type": "string",
+          "title": "The ultimoNome schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        }
+      },
+      "additionalProperties": true
+    },
+    "nomeCartao": {
+      "type": "string",
+      "title": "The nomeCartao schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "numero": {
+      "type": "string",
+      "title": "The numero schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "preferencial": {
+      "type": "boolean",
+      "title": "The preferencial schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "vencimento": {
+      "type": "object",
+      "title": "The vencimento schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "required": [
+        "ano",
+        "mes"
+      ],
+      "properties": {
+        "ano": {
+          "type": "string",
+          "title": "The ano schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "mes": {
+          "type": "string",
+          "title": "The mes schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "properties": {
+    "motivo": {
+      "type": "string",
+      "title": "The motivo schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "valor": {
+      "type": "integer",
+      "title": "The valor schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0
+    }
+  },
+  "additionalProperties": true
+}
